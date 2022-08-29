@@ -1,0 +1,130 @@
+/* Main */
+
+* {
+    font-family: Poppins, sans-serif;
+    font-weight: normal;
+}
+
+body, ul, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 500px;
+    margin: 0 auto;
+    /* background: rgb(221, 221, 221); */
+    background: #1E1E1E;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
+header {
+    background: black;
+    position: sticky;
+    top: 0px;
+    padding: 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+.menu h1{
+    margin: 0px 15px;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+
+.menu li {
+    display: inline-block;
+    color: #B9B9B9;
+}
+
+.menu a:visited {
+    color: #B9B9B9;
+}
+
+.menu a.active {
+    color: white;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+header h1 {
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 11px;
+}
+
+
+/* Articles */
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.project-info p {
+    color: white;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.project-info p b{
+    font-weight: bold;
+}
+
+.project-info h1 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.project-info h2 {
+    color: white;
+    text-align: center;
+}
+
+.project-info h2 b{
+    font-weight: bold;
+}
+
+.project-info img {
+    margin: 40px 0;
+}
+
+.project-info#uragun {
+    background: #304265;
+}
+
+.project-info#tts {
+    background: #CC342A;
+}
