@@ -115,9 +115,9 @@ footer {
     font-weight: bold;
 }
 
-.project-info img {
+.project-info .media {
     align-self: center;
-    width: 9%;
+    width: 99%;
     margin: 40px 0;
 }
 
