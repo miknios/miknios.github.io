@@ -150,12 +150,14 @@ footer {
 
 .project-info h1.side-info {
     text-align: left;
+    text-transform: none;
 }
 
 .project-info h2.side-info {
     text-align: left;
 }
 
+/* TODO: margin should expand/shrink depending on screen size */
 .project-info .separator {
     width: 35%;
     margin: 70px;
