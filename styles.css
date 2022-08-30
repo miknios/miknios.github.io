@@ -120,8 +120,8 @@ footer {
 
 .project-info .media {
     align-self: center;
-    width: 99%;
-    margin: 40px 0;
+    width: 100%;
+    margin: 20px 0;
 }
 
 .project-info#uragun {
@@ -130,6 +130,36 @@ footer {
 
 .project-info#tts {
     background: #CC342A;
+}
+
+.project-info#legendary {
+    background: #D69A25;
+}
+
+.project-info#mobiles {
+    background: #AD7AEF;
+}
+
+.project-info#side {
+    background: #EF7A7A;
+}
+
+.project-info h2.stuff {
+    padding: 40px 0px 40px 0px;
+}
+
+.project-info h1.side-info {
+    text-align: left;
+}
+
+.project-info h2.side-info {
+    text-align: left;
+}
+
+.project-info .separator {
+    width: 35%;
+    margin: 70px;
+    align-self: center;
 }
 
 @media screen and (min-width: 560px) {
