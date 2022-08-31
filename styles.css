@@ -130,6 +130,7 @@ footer {
     width: 100%;
     margin: calc(clamp(7px, 1.7vw, 15px)) 0;
     object-fit: contain;
+    border-radius: calc(clamp(20px, 3vw, 70px));
 }
 
 .project-info#uragun {
@@ -165,17 +166,17 @@ footer {
     text-align: left;
 }
 
-.separator{
+.separator {
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     align-self: center;
     margin: calc(min(15vw, 120px)) auto;
     height: calc(min(7vw, 60px));
     width: 50%;
 }
 
-.separator-dot{
+.separator-dot {
     background-color: white;
     border-radius: 50%;
     display: inline-block;
