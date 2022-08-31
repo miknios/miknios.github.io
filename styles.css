@@ -97,10 +97,10 @@ footer {
     flex-direction: column;
     padding: 30px 20px;
     font-size: 14px;
+    color: white;
 }
 
 .project-info p {
-    color: white;
     text-align: justify;
 }
 
@@ -109,15 +109,13 @@ footer {
 }
 
 .project-info h1 {
-    color: white;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
     font-size: 3em;
 }
 
-.project-info h2 {
-    color: white;
+.project-info h2, .info h2 {
     text-align: center;
     font-size: 1.5em;
 }
@@ -172,6 +170,40 @@ footer {
     align-self: center;
 }
 
+/* info */
+
+.info{
+    background: #FBEBEB;
+    padding: 30px 20px;
+    font-size: 14px;
+    color: #9E5E5E;
+}
+
+.info .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.info .photo{
+    width: 50%;
+    align-self: center;
+}
+
+.info .mail{
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 0;
+    font-size: 1.2em;
+}
+
+.info h2{
+    text-align: justify;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+/* Reactive changes */
+
 @media screen and (min-width: 560px) {
     .menu h1 {
         font-size: 36px;
@@ -181,7 +213,7 @@ footer {
         font-size: 24px;
     }
 
-    .project-info {
+    .project-info, .info {
         font-size: 18px;
     }
 }
@@ -195,7 +227,7 @@ footer {
         font-size: 32px;
     }
 
-    .project-info {
+    .project-info, .info {
         font-size: 24px;
     }
 }
