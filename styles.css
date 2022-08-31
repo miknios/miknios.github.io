@@ -17,6 +17,14 @@ body {
     box-sizing: border-box;
 }
 
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
 
 /* Header */
 
@@ -82,7 +90,7 @@ footer {
 }
 
 
-/* Articles */
+/* Projects */
 
 .project-info {
     display: flex;
