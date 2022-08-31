@@ -128,7 +128,7 @@ footer {
 .project-info .media {
     align-self: center;
     width: 100%;
-    margin: calc(clamp(7px, 2vw, 20px)) 0;
+    margin: calc(clamp(7px, 1.7vw, 15px)) 0;
     object-fit: contain;
 }
 
@@ -141,7 +141,7 @@ footer {
 }
 
 .project-info#legendary {
-    background: #D69A25;
+    background: #937436;
 }
 
 .project-info#mobiles {
@@ -149,7 +149,7 @@ footer {
 }
 
 .project-info#side {
-    background: #EF7A7A;
+    background: #d56c6c;
 }
 
 .project-info h2.stuff {
@@ -197,6 +197,11 @@ footer {
     font-weight: bold;
     padding: 20px 0;
     font-size: 1.2em;
+    color: #9E5E5E;
+}
+
+.info .mail:visited {
+    color: #9E5E5E;
 }
 
 .info h2 {
@@ -213,8 +218,6 @@ footer {
 }
 
 /* Reactive changes */
-
-/* update separator margins */
 
 @media screen and (min-width: 560px) {
     .menu h1 {
