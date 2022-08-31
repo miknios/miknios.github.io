@@ -169,6 +169,7 @@ footer {
     width: 35%;
     margin: calc(min(15vw, 120px)) auto;
     align-self: center;
+    object-fit: contain;
 }
 
 /* info */
