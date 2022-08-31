@@ -83,8 +83,8 @@
             </section>
 
             <section class="project-info" id="side">
-                <h1>Side projects</h1>
-                <p>
+                <h1 class="main-header">Side projects</h1>
+                <p style="margin-top: 20px;">
                     In my free time apart of playing games I love to create all kinds of things. Either it’s music,
                     visuals,
                     photography or games I always look towards experimenting and extending my skills.
@@ -108,23 +108,15 @@
                 </video>
                 <p>
                     When I played Abzû few years ago I was amazed by how well it looked and ran on my pretty old PC. So,
-                    for
-                    this project I wanted to explore optimisation techniques which allow to simulate and display big
-                    amounts
-                    of
-                    objects in real time. I’ve implemented movement algorithm using Data-Oriented Design and compute
-                    shaders.
-                    Fish are rendered in optimal way using GPU Instancing and persistent transform data in GPU buffers
-                    that
-                    are
-                    updated directly in compute shaders. There is also asynchronous data synchronisation, so I could
-                    query
-                    physics on CPU and send back the results to GPU without blocking game execution. I’ve implemented
-                    animation
-                    in vertex shader that takes into account acceleration and rotation changes of every fish. I’ve also
-                    did
-                    some
-                    visual effects, so the enviroment feels like underwater.
+                    for this project I wanted to explore optimisation techniques which allow to simulate and display big
+                    amounts of objects in real time. 
+                    <br><br>
+                    I’ve implemented movement algorithm using Data-Oriented Design and compute
+                    shaders. Fish are rendered in optimal way using GPU Instancing and persistent transform data in GPU buffers
+                    that are updated directly in compute shaders. There is also asynchronous data synchronisation, so I could
+                    query physics on CPU and send back the results to GPU without blocking game execution. I’ve implemented
+                    animation in vertex shader that takes into account acceleration and rotation changes of every fish. I’ve also
+                    did some visual effects, so the enviroment feels like underwater.
                     <br><br>
                     I tried to include as much elements as possible, because I know that it’s often easy to make
                     conclusions
@@ -183,15 +175,11 @@
                     technologies.
                     <br><br>
                 </p>
-                
+
                 <h2>
                     Take a look at my CV for more in information about my working experience, education and skills:
                 </h2>
-
-                <object width="400" height="500" type="application/pdf"
-                    data="/pdf/cv2022.pdf?#scrollbar=0&toolbar=0&navpanes=0" style="width: 100%; height: 1200px;">
-                    <p>Insert your error message here, if the PDF cannot be displayed.</p>
-                </object>
+                <a class="pdf-link" href="pdf/cv2022.pdf" target="_blank">link to pdf</a>
             </div>
         </div>
 

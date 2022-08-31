@@ -55,7 +55,6 @@ for (let i = 0; i < buttons.length; i++) {
     const button = buttons[i];
     const idx = i;
     button.addEventListener("click", function () {
-        console.log("click!");
 
         if (!button.classList.contains("active")) {
             button.classList.add("active");
