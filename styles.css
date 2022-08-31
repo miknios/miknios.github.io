@@ -108,6 +108,18 @@ footer {
     font-weight: bold;
 }
 
+.project-info .link{
+    font-weight: bold;
+    padding: 15px 0px;
+    font-size: 1.4em;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.project-info .link:hover{
+    color: white;
+}
+
 .project-info h1 {
     text-transform: uppercase;
     text-align: center;
@@ -196,6 +208,14 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.info p{
+    text-align: justify;
+}
+
+.info p b{
+    font-weight: bold;
 }
 
 .info .photo {
