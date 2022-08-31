@@ -165,11 +165,22 @@ footer {
     text-align: left;
 }
 
-.project-info .separator {
-    width: 35%;
-    margin: calc(min(15vw, 120px)) auto;
+.separator{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
     align-self: center;
-    object-fit: contain;
+    margin: calc(min(15vw, 120px)) auto;
+    height: calc(min(7vw, 60px));
+    width: 50%;
+}
+
+.separator-dot{
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    width: calc(min(7vw, 60px));
+    height: 100%;
 }
 
 /* info */
