@@ -130,7 +130,6 @@ footer {
     width: 100%;
     margin: calc(clamp(7px, 1.7vw, 15px)) 0;
     object-fit: contain;
-    border-radius: calc(clamp(20px, 3vw, 70px));
 }
 
 .project-info#uragun {
