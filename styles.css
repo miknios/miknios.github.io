@@ -225,9 +225,15 @@ footer {
 .info .mail {
     text-align: center;
     font-weight: bold;
-    padding: 20px 0;
     font-size: 1.2em;
     color: #9E5E5E;
+}
+
+.info .link {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    color:#9E5E5E;
 }
 
 .info .mail:visited {
