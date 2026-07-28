@@ -33,15 +33,21 @@
                 <img class="media" src="img/westRPG.jpeg" alt="Screenshots from three mobile games I've worked on ">
                 </video>
                 <p>
-                    The game is a mature, dark, dialogue heavy RPG set in Wild West. It's inspired by True Detective and Deadwood.
+                    The game is a mature, dark, dialogue heavy RPG set in Wild West. It's inspired by True Detective and
+                    Deadwood.
                     <br><br>
-                    For this game I made a custom Dialogue System in Unreal Engine 5. It's a complete toolset built from two main components - Dialogue Tree Editor and Cinematic Editor. 
-                    First, writers took care of preparing dialogue flow, defining skill checks, branching etc. using Dialogue Tree Editor. 
-                    Then, Cinematic Editor could make these dialogues into full-on cutscenes with gestures, character emotional states, camera cuts etc. with a realtime preview.
+                    For this game I made a custom Dialogue System in Unreal Engine 5. It's a complete toolset built from
+                    two main components - Dialogue Tree Editor and Cinematic Editor.
+                    First, writers took care of preparing dialogue flow, defining skill checks, branching etc. using
+                    Dialogue Tree Editor.
+                    Then, Cinematic Editor could make these dialogues into full-on cutscenes with gestures, character
+                    emotional states, camera cuts etc. with a realtime preview.
                     <br><br>
-                    I was also responsible for making the foundations of core gameplay systems for quests, map and interaction that drive player progression and world interactivity.
+                    I was also responsible for making the foundations of core gameplay systems for quests, map and
+                    interaction that drive player progression and world interactivity.
                     <br><br>
-                    Through the development of the game I also made a lot of editor tools that helped other team members with their jobs.
+                    Through the development of the game I also made a lot of editor tools that helped other team members
+                    with their jobs.
                 </p>
             </section>
 
@@ -57,7 +63,8 @@
                     I had a chance to work on most of its codebase. That includes gameplay, movement, progression, UI,
                     animations, optimization, shaders, etc.
                     <br><br>
-                    While I joined the team as a regular programmer, I wanted to be more involved and gained the trust to,
+                    While I joined the team as a regular programmer, I wanted to be more involved and gained the trust
+                    to,
                     at some point, take over
                     a lead role in the project.
                     <br><br>
@@ -124,20 +131,23 @@
                     <source data-src="video/atlantis.mp4" type="video/mp4">
                 </video>
                 <p>
-                    When I played <b>Abzû</b> a few years ago I was amazed by how well it looked and ran on my pretty old
+                    When I played <b>Abzû</b> a few years ago I was amazed by how well it looked and ran on my pretty
+                    old
                     PC. So,
                     for this project, I decided to explore optimization techniques that allow to simulate and display
                     big
                     amounts of objects in real-time.
                     <br><br>
                     I've implemented a movement algorithm using Data-Oriented Design principles and compute
-                    shaders. Fish are rendered in an optimal way using GPU Instancing and persistent transform data in GPU
+                    shaders. Fish are rendered in an optimal way using GPU Instancing and persistent transform data in
+                    GPU
                     buffers
                     that are updated directly in compute shaders. There is also asynchronous data synchronization, so I
                     could
                     query physics on the CPU and send back the results to GPU without blocking game execution. I've
                     implemented
-                    animation in vertex shader that takes into account the acceleration and rotation changes of every fish.
+                    animation in vertex shader that takes into account the acceleration and rotation changes of every
+                    fish.
                     I've also
                     done some visual effects like sand, caustics, or light shafts to help convey the underwater vibe.
                     <br><br>
@@ -169,12 +179,101 @@
                     <source data-src="video/skate.mp4" type="video/mp4">
                 </video>
                 <p>
-                    Prototype made in Unreal Engine for a platformer designed around using skateboard for different things based on gamplay context.
+                    Prototype made in Unreal Engine for a platformer designed around using skateboard for different
+                    things based on gamplay context.
                     <br><br>
-                    For this project I've implemented modular movement system based around built-in Character Movement Component,
-                    learned about creating animations inside the engine, implemented reusable combo system, tested some ideas for movement mechanics 
+                    For this project I've implemented modular movement system based around built-in Character Movement
+                    Component,
+                    learned about creating animations inside the engine, implemented reusable combo system, tested some
+                    ideas for movement mechanics
                     and learned a lot about implementing dynamic audio using built-in MetaSounds plugin.
                 </p>
+
+                <div class="separator">
+                    <span class="separator-dot"></span>
+                    <span class="separator-dot"></span>
+                    <span class="separator-dot"></span>
+                </div>
+
+                <h1 class="side-info">UE5 Locomotion & Procedural Animation Exploration</h1>
+                <h2 class="side-info">Prototype</h2>
+                <video class="media lazy" autoplay loop playsinline muted poster="img/ue5anim.jpg">
+                    <source data-src="video/ue5anim.mp4" type="video/mp4">
+                </video>
+                <div class="project-details">
+                    <p>
+                        A deep dive into dynamic character locomotion and procedural animation systems in Unreal Engine
+                        5. This project focuses on custom C++ Control Rig nodes, foot placement, stride
+                        adjustments, and rotational responsiveness to achieve smooth, grounded movement without
+                        sacrificing input control.
+                    </p>
+
+                    <h3>Key Technical Features</h3>
+
+                    <ul class="feature-list">
+                        <li>
+                            <strong>1. Custom Stride Warping (Walk / Run)</strong>
+                            <ul>
+                                <li><strong>Objective:</strong> Minimize foot sliding caused by speed variations across
+                                    directional animations.</li>
+                                <li><strong>Implementation:</strong> Designed a custom Control Rig node operating on
+                                    <code>FControlRigElementKey</code> instead of relying on the default AnimBP Stride
+                                    Warping node due to skeleton constraints.</li>
+                                <li><strong>Workflow:</strong> Baked root motion speed into animation curves using a
+                                    custom <code>Motion Extractor Modifier</code>. The Control Rig samples this
+                                    curve dynamically to scale real-time movement velocity, with an added
+                                    <code>StrideWarpingAlpha</code> variable to selectively toggle warping per movement
+                                    mode.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>2. Procedural Aim & Turn Correction</strong>
+                            <ul>
+                                <li><strong>Objective:</strong> Enhance rotation responsiveness and convey character
+                                    intent without visual popping.</li>
+                                <li><strong>Implementation:</strong> Built a custom C++ Control Rig node
+                                     that applies delta rotation across a bone
+                                    chain with configurable easing (rotating the head more aggressively than the neck
+                                    and spine).</li>
+                                <li><strong>Locomotion Turning:</strong> Uses movement input acceleration to subtly turn
+                                    the head toward the target direction ahead of the body.</li>
+                                <li><strong>Aiming Mode:</strong> Takes player Control Rotation directly for pitch/yaw
+                                    targeting. Sharing the underlying system between locomotion and aiming
+                                    ensured seamless visual transitions.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>3. C++ Foot Locking System (Sneak / Crouched Mode)</strong>
+                            <ul>
+                                <li><strong>Objective:</strong> Eliminate noticeable foot sliding during tight rotations
+                                    and low-speed, crouched stances.</li>
+                                <li><strong>Implementation:</strong> Created a C++ Control Rig node
+                                    that pins feet to World Space transforms upon ground
+                                    contact until unplanted. Kept location locked while smoothly interpolating
+                                    rotation to match player input.</li>
+                                <li><strong>Automation:</strong> Developed a custom C++ Anim Modifier
+                                    to automatically generate foot contact
+                                    curves driven by asset configuration. Added a secondary modifier
+                                    to dynamically override locking via a <code>FootLockMultiplier</code> curve.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>4. Dynamic Foot & Hand Ground Placement (IK)</strong>
+                            <ul>
+                                <li><strong>Objective:</strong> Maintain realistic physical grounding across uneven
+                                    terrain.</li>
+                                <li><strong>Implementation:</strong> Implemented a C++ Control Rig node
+                                    performing shape sweeps per limb to offset IK effectors dynamically.</li>
+                                <li><strong>Versatility:</strong> Reuses the contact curve data from the Foot Lock
+                                    system and extends coverage to both feet and hands during quadrupedal/sneak
+                                    locomotion.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
                 <div class="separator">
                     <span class="separator-dot"></span>
@@ -188,16 +287,16 @@
                     <source data-src="video/internetlines.mp4" type="video/mp4">
                 </video>
                 <p>
-                    Prototype made in Unreal Engine for a game inspired by our childhood, 
+                    Prototype made in Unreal Engine for a game inspired by our childhood,
                     stop motion animation and european eastern bloc countries culture during 90s.
                     <br><br>
-                    I was able to implement some foundations for the game, like camera system, 
-                    framework for gameplay based around open-world with story progressing with each day, 
-                    dialogue system, interaction system etc. 
+                    I was able to implement some foundations for the game, like camera system,
+                    framework for gameplay based around open-world with story progressing with each day,
+                    dialogue system, interaction system etc.
                 </p>
 
                 <a class="link" href="https://youtu.be/k9XA1YVakkc?si=WZ1zyiSwtEQK3s9J" target="_blank">Devlog Video</a>
-                
+
                 <div class="separator">
                     <span class="separator-dot"></span>
                     <span class="separator-dot"></span>
@@ -210,16 +309,17 @@
                     <source data-src="video/thewalk.mp4" type="video/mp4">
                 </video>
                 <p>
-                    Theme for 2023 GMTK Game Jam was "Roles Reversed". Our take on the theme was to create a 
-                    world where dogs walk humans. Gameplay is very simple as we wanted to focus mostly on evoking emotions. 
-                    We are very happy with how this one turned out. Most people who got to the end seem to 
+                    Theme for 2023 GMTK Game Jam was "Roles Reversed". Our take on the theme was to create a
+                    world where dogs walk humans. Gameplay is very simple as we wanted to focus mostly on evoking
+                    emotions.
+                    We are very happy with how this one turned out. Most people who got to the end seem to
                     be surprised by the ending and felt things.
                     <br><br>
                     You can play the game on PC from browser. Try giving it a shot!
                 </p>
 
                 <a class="link" href="https://morlinski.itch.io/the-walk" target="_blank">itch.io page</a>
-                
+
                 <div class="separator">
                     <span class="separator-dot"></span>
                     <span class="separator-dot"></span>
@@ -231,7 +331,8 @@
                     <source data-src="video/visuals.mp4" type="video/mp4">
                 </video>
                 <p>
-                    I wanted to explore the possibilities of visually reacting to things that happen during a show in real-time.
+                    I wanted to explore the possibilities of visually reacting to things that happen during a show in
+                    real-time.
                     <br><br>
                     I've had a chance to make projects for a few live sets that analyzed audio signal and used data
                     captured
@@ -251,8 +352,8 @@
                     <source data-src="video/fps.mp4" type="video/mp4">
                 </video>
                 <p>
-                    Prototype made in Unity and Proton where instead of shooting directly at your opponent, 
-                    players were forced to activate traps that were scattered around the level. 
+                    Prototype made in Unity and Proton where instead of shooting directly at your opponent,
+                    players were forced to activate traps that were scattered around the level.
                     A bit like in Quake where with a rocket launcher you have to think a bit ahead and
                     aim where your enemy will be in a second.
                 </p>
@@ -264,23 +365,26 @@
         <div class="page info active">
             <div class="container">
                 <img class="photo" src="img/photo.png" alt="Portait photo of me">
-                
+
                 <p><br></p>
 
                 <a class="link" href="https://github.com/miknios" target="_blank">GitHub</a>
                 <a class="mail" href="mailto: miknios@gmail.com">miknios@gmail.com</a>
-                
+
                 <p>
                     <br>
-                    Hello! My name is <b>Mikołaj Wójcik</b> and I’m a <b>game programmer</b> with 7 years of commercial experience. 
-                    My main focus is gameplay programming: building responsive character controllers, fluid movement, expressive animation, 
+                    Hello! My name is <b>Mikołaj Wójcik</b> and I’m a <b>game programmer</b> with 7 years of commercial
+                    experience.
+                    My main focus is gameplay programming: building responsive character controllers, fluid movement,
+                    expressive animation,
                     intuitive UI, and high-impact shaders & effects that make the game feel great to play.
                     <br><br>
                     I also love to create all kinds of other, non-game, things.
                     <br><br>
                     Feel free to explore some of the projects that I had a chance to work on in the <b>"works"</b> page.
                     <br><br>
-                    I made some plugins for UE while working on my side projects. You're free to use them and check their code out on GitHub, 
+                    I made some plugins for UE while working on my side projects. You're free to use them and check
+                    their code out on GitHub,
                     but sadly I don't have enough time to make documentation for how you use them exactly.
                 </p>
 

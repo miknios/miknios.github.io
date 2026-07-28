@@ -180,6 +180,67 @@ footer {
     text-align: left;
 }
 
+/* Styling for feature lists inside side projects */
+
+.project-info .project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.project-info h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.project-info ul.feature-list,
+.project-info ul.tech-stack-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-info ul.feature-list > li {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 15px 20px;
+    border-radius: 6px;
+}
+
+.project-info ul.feature-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.project-info ul.feature-list li,
+.project-info ul.tech-stack-list li {
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+
+.project-info code {
+    font-family: monospace;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: #fff;
+}
+
+.project-info strong,
+.project-info b {
+    font-weight: 700;
+}
+
 .separator {
     display: flex;
     flex-direction: row;
