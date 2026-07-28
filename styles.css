@@ -143,6 +143,10 @@ footer {
     object-fit: contain;
 }
 
+.project-info#westRPG {
+    background: #24272d;
+}
+
 .project-info#uragun {
     background: #304265;
 }
