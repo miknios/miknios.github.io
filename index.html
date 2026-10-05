@@ -195,6 +195,92 @@
                     <span class="separator-dot"></span>
                 </div>
 
+                <h1 class="side-info">UE5 Locomotion & Procedural Animation Exploration</h1>
+                <h2 class="side-info">Prototype</h2>
+                <video class="media lazy" autoplay loop playsinline muted poster="img/ue5anim.jpg">
+                    <source data-src="video/ue5anim.mp4" type="video/mp4">
+                </video>
+                <div class="project-details">
+                    <p>
+                        A deep dive into dynamic character locomotion and procedural animation systems in Unreal Engine
+                        5. This project focuses on custom C++ Control Rig nodes, foot placement, stride
+                        adjustments, and rotational responsiveness to achieve smooth, grounded movement without
+                        sacrificing input control.
+                    </p>
+
+                    <h3>Key Technical Features</h3>
+
+                    <ul class="feature-list">
+                        <li>
+                            <strong>1. Custom Stride Warping (Walk / Run)</strong>
+                            <ul>
+                                <li><strong>Objective:</strong> Minimize foot sliding caused by speed variations across
+                                    directional animations.</li>
+                                <li><strong>Implementation:</strong> Designed a custom Control Rig node operating on
+                                    <code>FControlRigElementKey</code> instead of relying on the default AnimBP Stride
+                                    Warping node due to skeleton constraints.</li>
+                                <li><strong>Workflow:</strong> Baked root motion speed into animation curves using a
+                                    custom <code>Motion Extractor Modifier</code>. The Control Rig samples this
+                                    curve dynamically to scale real-time movement velocity, with an added
+                                    <code>StrideWarpingAlpha</code> variable to selectively toggle warping per movement
+                                    mode.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>2. Procedural Aim & Turn Correction</strong>
+                            <ul>
+                                <li><strong>Objective:</strong> Enhance rotation responsiveness and convey character
+                                    intent without visual popping.</li>
+                                <li><strong>Implementation:</strong> Built a custom C++ Control Rig node
+                                     that applies delta rotation across a bone
+                                    chain with configurable easing (rotating the head more aggressively than the neck
+                                    and spine).</li>
+                                <li><strong>Locomotion Turning:</strong> Uses movement input acceleration to subtly turn
+                                    the head toward the target direction ahead of the body.</li>
+                                <li><strong>Aiming Mode:</strong> Takes player Control Rotation directly for pitch/yaw
+                                    targeting. Sharing the underlying system between locomotion and aiming
+                                    ensured seamless visual transitions.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>3. C++ Foot Locking System (Sneak / Crouched Mode)</strong>
+                            <ul>
+                                <li><strong>Objective:</strong> Eliminate noticeable foot sliding during tight rotations
+                                    and low-speed, crouched stances.</li>
+                                <li><strong>Implementation:</strong> Created a C++ Control Rig node
+                                    that pins feet to World Space transforms upon ground
+                                    contact until unplanted. Kept location locked while smoothly interpolating
+                                    rotation to match player input.</li>
+                                <li><strong>Automation:</strong> Developed a custom C++ Anim Modifier
+                                    to automatically generate foot contact
+                                    curves driven by asset configuration. Added a secondary modifier
+                                    to dynamically override locking via a <code>FootLockMultiplier</code> curve.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>4. Dynamic Foot & Hand Ground Placement (IK)</strong>
+                            <ul>
+                                <li><strong>Objective:</strong> Maintain realistic physical grounding across uneven
+                                    terrain.</li>
+                                <li><strong>Implementation:</strong> Implemented a C++ Control Rig node
+                                    performing shape sweeps per limb to offset IK effectors dynamically.</li>
+                                <li><strong>Versatility:</strong> Reuses the contact curve data from the Foot Lock
+                                    system and extends coverage to both feet and hands during quadrupedal/sneak
+                                    locomotion.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="separator">
+                    <span class="separator-dot"></span>
+                    <span class="separator-dot"></span>
+                    <span class="separator-dot"></span>
+                </div>
+
                 <h1 class="side-info">Heard From The Internet Lines</h1>
                 <h2 class="side-info">Prototype</h2>
                 <video class="media lazy" autoplay loop playsinline muted poster="img/internetlines.png">
