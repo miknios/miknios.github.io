@@ -139,11 +139,6 @@ footer a:hover {
     opacity: 0.9;
 }
 
-.project-meta > * + *::before {
-    content: "·";
-    margin: 0 0.5em;
-}
-
 .project-info .media {
     display: block;
     width: 100%;

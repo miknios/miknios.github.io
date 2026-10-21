@@ -1,8 +1,7 @@
-{% if item.data.role or item.data.company or item.data.subtitle or item.data.years %}
+{% set metaParts = [item.data.company, item.data.subtitle, item.data.years] | select %}
+{% if item.data.role or metaParts.length %}
 <p class="project-meta">
-    {%- if item.data.role %}<b>{{ item.data.role }}</b>{% endif -%}
-    {%- if item.data.company %}<span>{{ item.data.company }}</span>{% endif -%}
-    {%- if item.data.subtitle %}<span>{{ item.data.subtitle }}</span>{% endif -%}
-    {%- if item.data.years %}<span>{{ item.data.years }}</span>{% endif -%}
+    {%- if item.data.role %}<b>{{ item.data.role }}</b>{% if metaParts.length %} · {% endif %}{% endif -%}
+    {{ metaParts | join(" · ") }}
 </p>
 {% endif %}
