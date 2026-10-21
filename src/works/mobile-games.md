@@ -1,5 +1,7 @@
 ---
 title: Mobile Games
+role: Intern
+company: DaftMobile
 order: 50
 color: "#AD7AEF"
 image: /img/mobiles.png

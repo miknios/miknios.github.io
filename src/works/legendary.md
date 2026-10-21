@@ -2,6 +2,7 @@
 title: Legendary
 role: Junior Unity Developer
 company: Daftcode
+years: 2019 – 2020
 order: 40
 color: "#937436"
 image: /img/legendary.png

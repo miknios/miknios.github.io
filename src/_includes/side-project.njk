@@ -1,7 +1,5 @@
 <h1 class="side-info" id="{{ item.page.fileSlug }}">{{ item.data.title }}</h1>
-{% if item.data.subtitle %}
-<h2 class="side-info">{{ item.data.subtitle }}</h2>
-{% endif %}
+{% include "meta.njk" %}
 {% include "media.njk" %}
 <div class="project-body">
     {{ item.content | safe }}

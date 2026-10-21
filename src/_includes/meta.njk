@@ -1,0 +1,8 @@
+{% if item.data.role or item.data.company or item.data.subtitle or item.data.years %}
+<p class="project-meta">
+    {%- if item.data.role %}<b>{{ item.data.role }}</b>{% endif -%}
+    {%- if item.data.company %}<span>{{ item.data.company }}</span>{% endif -%}
+    {%- if item.data.subtitle %}<span>{{ item.data.subtitle }}</span>{% endif -%}
+    {%- if item.data.years %}<span>{{ item.data.years }}</span>{% endif -%}
+</p>
+{% endif %}

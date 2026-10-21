@@ -5,7 +5,7 @@ order: 10
 video: /video/atlantis.mp4
 poster: /img/atlantis.png
 links:
-  - label: Youtube video
+  - label: YouTube video
     url: https://www.youtube.com/watch?v=t9oxAQDfv6c
 ---
 When I played **Abzû** a few years ago I was amazed by how well it looked and ran on my pretty old PC. So, for this

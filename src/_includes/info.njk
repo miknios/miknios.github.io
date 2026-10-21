@@ -1,29 +1,29 @@
 <div class="container">
     <img class="photo" src="/img/photo.png" alt="Portrait photo of me">
 
-    <p><br></p>
+    {% include "contact-links.njk" %}
 
-    <a class="link" href="https://github.com/miknios" target="_blank">GitHub</a>
-    <a class="mail" href="mailto:miknios@gmail.com">miknios@gmail.com</a>
-
-    <p>
-        <br>
-        Hello! My name is <b>Mikołaj Wójcik</b> and I’m a <b>game programmer</b> with 7 years of commercial
-        experience.
-        My main focus is gameplay programming: building responsive character controllers, fluid movement,
-        expressive animation, intuitive UI, and high-impact shaders & effects that make the game feel great to play.
-        <br><br>
-        I also love to create all kinds of other, non-game, things.
-        <br><br>
-        Feel free to explore some of the projects that I had a chance to work on in the <b>"works"</b> page.
-        <br><br>
-        I made some plugins for UE while working on my side projects. You're free to use them and check
-        their code out on <a class="inline-link" href="https://github.com/miknios?tab=repositories" target="_blank">GitHub</a>,
-        but sadly I don't have enough time to make documentation for how you use them exactly.
-    </p>
-
-    <h2>
-        Take a look at my CV for more information about my working experience, education and skills:
-    </h2>
-    <a class="pdf-link" href="/pdf/cv.pdf" target="_blank">link to my CV</a>
+    <div class="intro">
+        <p>
+            Hello! My name is <b>Mikołaj Wójcik</b> and I’m a <b>game programmer</b> with 7 years of commercial
+            experience. My main focus is gameplay programming: building responsive character controllers, fluid
+            movement, expressive animation, intuitive UI, and high-impact shaders & effects that make the game feel
+            great to play.
+        </p>
+        <p>
+            I also love to create all kinds of other, non-game, things.
+        </p>
+        <p>
+            Feel free to explore some of the projects that I had a chance to work on in the <b>"works"</b> page.
+        </p>
+        <p>
+            I made some plugins for UE while working on my side projects. You're free to use them and check their code
+            out on <a href="https://github.com/miknios?tab=repositories" target="_blank">GitHub</a>, but sadly I don't
+            have enough time to make documentation for how you use them exactly.
+        </p>
+        <p>
+            For more about my working experience, education and skills, take a look at my
+            <a href="{{ contact.cv }}" target="_blank">CV</a>.
+        </p>
+    </div>
 </div>

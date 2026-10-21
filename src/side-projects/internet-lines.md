@@ -5,7 +5,7 @@ order: 40
 video: /video/internetlines.mp4
 poster: /img/internetlines.jpg
 links:
-  - label: Devlog Video
+  - label: Devlog video
     url: https://youtu.be/k9XA1YVakkc?si=WZ1zyiSwtEQK3s9J
 ---
 Prototype made in Unreal Engine for a game inspired by our childhood, stop motion animation and european eastern bloc

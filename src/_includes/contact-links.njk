@@ -1,0 +1,7 @@
+{# Contact details come from src/_data/contact.json, empty ones are hidden #}
+<ul class="contact-links">
+    {% if contact.github %}<li><a href="{{ contact.github }}" target="_blank">GitHub</a></li>{% endif %}
+    {% if contact.linkedin %}<li><a href="{{ contact.linkedin }}" target="_blank">LinkedIn</a></li>{% endif %}
+    {% if contact.email %}<li><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>{% endif %}
+    {% if contact.cv %}<li><a href="{{ contact.cv }}" target="_blank">CV</a></li>{% endif %}
+</ul>

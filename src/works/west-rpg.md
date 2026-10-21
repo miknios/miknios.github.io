@@ -2,6 +2,7 @@
 title: Unannounced Wild West RPG
 role: Senior Programmer
 company: Zakazane
+years: 2024 – now
 order: 10
 color: "#24272d"
 image: /img/westRPG.jpeg

@@ -10,9 +10,10 @@ Create a Markdown file in `src/works/` (professional work) or `src/side-projects
 ```markdown
 ---
 title: Uragun
-role: Lead Programmer        # works only, shown as "as Lead Programmer at Kool2Play"
+role: Lead Programmer        # works only, shown as "Lead Programmer · Kool2Play · 2020 – 2023"
 company: Kool2Play           # works only
 subtitle: Prototype          # side projects only, optional
+years: 2020 – 2023           # optional, e.g. "2022" or "2024 – now"
 order: 20                    # position on the page, lowest first
 color: "#304265"             # works only, background colour of the section
 video: /video/uragun.mp4     # either a video + poster image...
@@ -50,5 +51,6 @@ Then open http://localhost:8080. The page reloads automatically when you save a 
 - `src/works/`, `src/side-projects/` – one Markdown file per project
 - `src/index.njk` – the main page (side projects intro text, page order)
 - `src/_includes/info.njk` – the "info" page
+- `src/_data/contact.json` – GitHub, LinkedIn, email and CV links (shown on the info page and in the footer, empty ones are hidden)
 - `src/_includes/` – the other building blocks of the page
 - `src/styles.css` – all styling
