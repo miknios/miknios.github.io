@@ -1,0 +1,17 @@
+<h1 class="side-info" id="{{ item.page.fileSlug }}">{{ item.data.title }}</h1>
+{% if item.data.subtitle %}
+<h2 class="side-info">{{ item.data.subtitle }}</h2>
+{% endif %}
+{% include "media.njk" %}
+<div class="project-body">
+    {{ item.content | safe }}
+</div>
+{% include "links.njk" %}
+
+{% if not loop.last %}
+<div class="separator">
+    <span class="separator-dot"></span>
+    <span class="separator-dot"></span>
+    <span class="separator-dot"></span>
+</div>
+{% endif %}

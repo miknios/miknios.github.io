@@ -1,0 +1,11 @@
+<section class="project-info" id="{{ item.page.fileSlug }}" style="background: {{ item.data.color }};">
+    <h1>{{ item.data.title }}</h1>
+    {% if item.data.role %}
+    <h2>as <b>{{ item.data.role }}</b> at {{ item.data.company }}</h2>
+    {% endif %}
+    {% include "media.njk" %}
+    <div class="project-body">
+        {{ item.content | safe }}
+    </div>
+    {% include "links.njk" %}
+</section>

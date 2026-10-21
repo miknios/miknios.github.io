@@ -143,25 +143,7 @@ footer {
     object-fit: contain;
 }
 
-.project-info#westRPG {
-    background: #24272d;
-}
-
-.project-info#uragun {
-    background: #304265;
-}
-
-.project-info#tts {
-    background: #CC342A;
-}
-
-.project-info#legendary {
-    background: #937436;
-}
-
-.project-info#mobiles {
-    background: #AD7AEF;
-}
+/* Each project's background colour is set by `color` in its Markdown file */
 
 .project-info#side {
     background: #d56c6c;
@@ -180,25 +162,25 @@ footer {
     text-align: left;
 }
 
-/* Styling for feature lists inside side projects */
+/* Project text written in Markdown */
 
-.project-info .project-details {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 15px;
+.project-body p + p {
+    /* one empty line between paragraphs */
+    margin-top: 1.5em;
+    margin-top: 1lh;
 }
 
 .project-info h3 {
     font-size: 1.4em;
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin-top: 35px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
-.project-info ul.feature-list,
-.project-info ul.tech-stack-list {
+/* A bullet list in a project's text shows each item as a card, sub-bullets are regular bullets inside it */
+
+.project-body > ul {
     list-style-type: none;
     padding-left: 0;
     display: flex;
@@ -206,13 +188,13 @@ footer {
     gap: 15px;
 }
 
-.project-info ul.feature-list > li {
+.project-body > ul > li {
     background: rgba(0, 0, 0, 0.15);
     padding: 15px 20px;
     border-radius: 6px;
 }
 
-.project-info ul.feature-list ul {
+.project-body > ul ul {
     list-style-type: disc;
     padding-left: 20px;
     margin-top: 8px;
@@ -221,8 +203,7 @@ footer {
     gap: 6px;
 }
 
-.project-info ul.feature-list li,
-.project-info ul.tech-stack-list li {
+.project-body li {
     font-size: 0.9em;
     line-height: 1.4em;
 }
@@ -302,6 +283,11 @@ footer {
 }
 
 .info .mail:visited {
+    color: #9E5E5E;
+}
+
+.info .inline-link {
+    font-weight: bold;
     color: #9E5E5E;
 }
 

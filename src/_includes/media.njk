@@ -1,0 +1,7 @@
+{% if item.data.video %}
+<video class="media lazy" autoplay loop playsinline muted poster="{{ item.data.poster }}">
+    <source data-src="{{ item.data.video }}" type="video/mp4">
+</video>
+{% elif item.data.image %}
+<img class="media" src="{{ item.data.image }}" alt="{{ item.data.alt }}">
+{% endif %}
