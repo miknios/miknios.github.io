@@ -1,7 +1,13 @@
+{# Pictures come from src/_data/images.js (resized WebP versions). Videos load and start playing once they're
+   scrolled into view, see src/js/script.js #}
 {% if item.data.video %}
-<video class="media lazy" autoplay loop playsinline muted poster="{{ item.data.poster }}">
+{% set poster = images[item.data.poster] %}
+<video class="media" loop muted playsinline preload="none" width="{{ poster.width }}" height="{{ poster.height }}"
+    data-poster="{{ poster.src }}" aria-label="{{ item.data.alt or 'Video from ' + item.data.title }}">
     <source data-src="{{ item.data.video }}" type="video/mp4">
 </video>
 {% elif item.data.image %}
-<img class="media" src="{{ item.data.image }}" alt="{{ item.data.alt }}">
+{% set image = images[item.data.image] %}
+<img class="media" src="{{ image.src }}" srcset="{{ image.srcset }}" sizes="(min-width: 900px) 804px, 100vw"
+    width="{{ image.width }}" height="{{ image.height }}" alt="{{ item.data.alt }}" loading="lazy" decoding="async">
 {% endif %}

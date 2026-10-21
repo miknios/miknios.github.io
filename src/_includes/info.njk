@@ -1,11 +1,13 @@
 <div class="container">
-    <img class="photo" src="/img/photo.png" alt="Portrait photo of me">
+    {% set photo = images["/img/photo.png"] %}
+    <img class="photo" src="{{ photo.src }}" srcset="{{ photo.srcset }}" sizes="280px" width="{{ photo.width }}"
+        height="{{ photo.height }}" alt="Portrait photo of me">
 
     {% include "contact-links.njk" %}
 
     <div class="intro">
         <p>
-            Hello! My name is <b>Mikołaj Wójcik</b> and I’m a <b>game programmer</b> with 7 years of commercial
+            Hello! My name is <b>Mikołaj Wójcik</b> and I’m a <b>game programmer</b> with {{ year - site.careerStartYear }} years of commercial
             experience. My main focus is gameplay programming: building responsive character controllers, fluid
             movement, expressive animation, intuitive UI, and high-impact shaders & effects that make the game feel
             great to play.

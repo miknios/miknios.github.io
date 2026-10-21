@@ -3,7 +3,7 @@ title: Mobile Games
 role: Intern
 company: DaftMobile
 order: 50
-color: "#AD7AEF"
+color: "#825BB3"
 image: /img/mobiles.png
 alt: Screenshots from three mobile games I've worked on
 ---

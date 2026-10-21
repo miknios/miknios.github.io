@@ -19,4 +19,4 @@ optimization, shaders, etc.
 While I joined the team as a regular programmer, I wanted to be more involved and gained the trust to, at some point,
 take over a lead role in the project.
 
-Currently, we are in the progress of redoing lots of stuff to make this game into a roguelike.
+I also guided the team through a major rework of the game to turn it into a roguelike.

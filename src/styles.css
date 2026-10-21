@@ -123,7 +123,7 @@ footer a:hover {
     color: white;
 }
 
-.project-info h1 {
+.project-info h2 {
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
@@ -142,6 +142,7 @@ footer a:hover {
 .project-info .media {
     display: block;
     width: 100%;
+    height: auto;
     margin: 24px 0;
     border-radius: 6px;
 }
@@ -149,27 +150,28 @@ footer a:hover {
 /* Each project's background colour is set by `color` in its Markdown file */
 
 .project-info#side {
-    background: #d56c6c;
+    background: #A75555;
 }
 
 .project-info .side-intro {
     margin-top: 16px;
 }
 
-.project-info h2.stuff {
+.project-info .stuff {
     padding: 48px 0 40px;
     text-align: center;
     font-weight: bold;
     font-size: 1.2em;
 }
 
-.project-info h1.side-info {
+.project-info h3.side-info {
     text-align: left;
-    text-transform: none;
+    font-weight: bold;
     font-size: 1.8em;
+    line-height: 1.1;
 }
 
-.project-info h1.side-info + .project-meta {
+.project-info h3.side-info + .project-meta {
     text-align: left;
 }
 
@@ -189,7 +191,7 @@ footer a:hover {
     opacity: 0.8;
 }
 
-.project-info h3 {
+.project-body h3, .project-body h4 {
     margin: 32px 0 16px;
     font-size: 1.2em;
     font-weight: bold;
@@ -288,7 +290,7 @@ footer a:hover {
     padding: 40px 20px;
     font-size: 16px;
     line-height: 1.6;
-    color: #9E5E5E;
+    color: #935757;
 }
 
 .info .container {
@@ -299,6 +301,7 @@ footer a:hover {
 
 .info .photo {
     width: min(60%, 280px);
+    height: auto;
     align-self: center;
 }
 
@@ -313,9 +316,9 @@ footer a:hover {
 .info .contact-links a {
     display: inline-block;
     padding: 6px 16px;
-    border: 2px solid #9E5E5E;
+    border: 2px solid #935757;
     border-radius: 999px;
-    color: #9E5E5E;
+    color: #935757;
     font-weight: bold;
     font-size: 0.875em;
     text-decoration: none;
@@ -323,7 +326,7 @@ footer a:hover {
 }
 
 .info .contact-links a:hover {
-    background: #9E5E5E;
+    background: #935757;
     color: #FBEBEB;
 }
 
@@ -335,6 +338,18 @@ footer a:hover {
     color: inherit;
     font-weight: bold;
     text-underline-offset: 3px;
+}
+
+/* Page not found */
+
+.not-found {
+    min-height: 60vh;
+}
+
+.not-found h2 {
+    margin-bottom: 16px;
+    font-size: 1.6em;
+    font-weight: bold;
 }
 
 
@@ -354,7 +369,7 @@ footer a:hover {
         font-size: 17px;
     }
 
-    .project-info h1 {
+    .project-info h2 {
         font-size: 2.6em;
     }
 }
@@ -373,7 +388,7 @@ footer a:hover {
         font-size: 18px;
     }
 
-    .project-info h1 {
+    .project-info h2 {
         font-size: 2.8em;
     }
 

@@ -1,7 +1,8 @@
 ---
 layout: base.njk
 ---
-<div class="page works">
+{# The id of each page is its address, e.g. /#works. See src/js/script.js #}
+<div class="page works" id="works">
 
     {# Professional projects come from src/works/*.md #}
     {% for item in collections.works %}
@@ -9,13 +10,13 @@ layout: base.njk
     {% endfor %}
 
     <section class="project-info" id="side">
-        <h1 class="main-header">Side projects</h1>
+        <h2 class="main-header">Side projects</h2>
         <p class="side-intro">
             In my free time, I love to create all kinds of things. Whether it's music, visuals, photography, or games
             I always look toward experimenting and extending my skills.
         </p>
 
-        <h2 class="stuff">Here's some of the stuff that I've made:</h2>
+        <p class="stuff">Here's some of the stuff that I've made:</p>
 
         {# Side projects come from src/side-projects/*.md #}
         {% for item in collections.sideProjects %}
@@ -25,6 +26,6 @@ layout: base.njk
 
 </div>
 
-<div class="page info active">
+<div class="page info active" id="info">
     {% include "info.njk" %}
 </div>

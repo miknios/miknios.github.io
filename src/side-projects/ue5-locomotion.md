@@ -9,7 +9,7 @@ A deep dive into dynamic character locomotion and procedural animation systems i
 focuses on custom C++ Control Rig nodes, foot placement, stride adjustments, and rotational responsiveness to achieve
 smooth, grounded movement without sacrificing input control.
 
-### Key Technical Features
+#### Key Technical Features
 
 - **1. Custom Stride Warping (Walk / Run)**
   - **Objective:** Minimize foot sliding caused by speed variations across directional animations.

@@ -9,8 +9,8 @@ links:
     url: https://www.youtube.com/watch?v=t9oxAQDfv6c
 ---
 When I played **Abzû** a few years ago I was amazed by how well it looked and ran on my pretty old PC. So, for this
-project, I decided to explore optimization techniques that allow to simulate and display big amounts of objects in
-real-time.
+project, I decided to explore optimization techniques that make it possible to simulate and display large numbers of
+objects in real-time.
 
 I've implemented a movement algorithm using Data-Oriented Design principles and compute shaders. Fish are rendered in
 an optimal way using GPU Instancing and persistent transform data in GPU buffers that are updated directly in compute
@@ -20,9 +20,8 @@ the acceleration and rotation changes of every fish. I've also done some visual 
 shafts to help convey the underwater vibe.
 
 I tried to include as many elements as possible because I know that it's easy to make conclusions from prototypes
-where only the bare minimum is present. But the biggest challenges often arise when you're trying to put prototype
+where only the bare minimum is present. But the biggest challenges often arise when you're trying to put a prototype
 into context.
 
 I wanted to release the full project publicly, but in the end, I used some assets from Unity Asset Store, so I
-couldn't. Instead I've put some of its [code on GitHub](https://github.com/miknios/eseas-code) and I'm planning to
-write some articles to explain the most important things that I've learned while making this project.
+couldn't. Instead, I've put some of its [code on GitHub](https://github.com/miknios/eseas-code).
